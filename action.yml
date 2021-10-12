@@ -5,7 +5,7 @@ author: "Aprende DEVOPS <devops@aprende.com>"
 description: "Creates a changelog based on the commits using Angular Convention"
 
 inputs:
-  repository_path:
+  path:
     description: "Path where the repository is located"
     required: false
   changelog_filename:

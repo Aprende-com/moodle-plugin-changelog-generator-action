@@ -29,8 +29,8 @@ def main():
 
     ap = ArgumentParser(description=main.__doc__)
 
-    ap.add_argument('-r', '--repository-path', type=str,
-                    default=ENV.get('INPUT_REPOSITORY_PATH', '.'))
+    ap.add_argument('-p', '--path', type=str,
+                    default=ENV.get('INPUT_PATH', '.'))
     ap.add_argument('-f', '--changelog-filename', type=str,
                     default=ENV.get('INPUT_CHANGELOG_FILENAME',
                                     'CHANGELOG.md'))
