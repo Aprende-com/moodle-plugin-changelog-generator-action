@@ -42,8 +42,8 @@ def main():
 
     args = ap.parse_args()
 
-    print(f"Analizing git repository at: {args.repository_path}")
-    repo = Repo(args.repository_path)
+    print(f"Analizing git repository at: {args.path}")
+    repo = Repo(args.path)
 
     if repo.bare:
         raise Exception("Bare repo found!")
