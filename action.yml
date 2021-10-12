@@ -8,6 +8,7 @@ inputs:
   path:
     description: "Path where the repository is located"
     required: false
+    default: '.'
   changelog_filename:
     description: "Name of the changelog file"
     required: false
