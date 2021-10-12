@@ -1,0 +1,25 @@
+---
+
+name: "Moodle Plugin Changelog Generator"
+author: "Aprende DEVOPS <devops@aprende.com>"
+description: "Creates a changelog based on the commits using Angular Convention"
+
+inputs:
+  repository_path:
+    description: "Path where the repository is located"
+    required: false
+  changelog_filename:
+    description: "Name of the changelog file"
+    required: false
+
+outputs:
+  changelog:
+    description: "A changelog file"
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'book'
+  color: 'blue'
