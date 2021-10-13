@@ -68,7 +68,7 @@ def main():
 
     if not args.dry_run:
         if len(output) > 1:
-            output_filename = f"{args.repository_path}/{args.changelog_filename}"
+            output_filename = f"{args.path}/{args.changelog_filename}"
             with open(output_filename, "w+") as file:
                 file.writelines([ f"{x}\n" for x in output])
             print(f"{output_filename} written")
