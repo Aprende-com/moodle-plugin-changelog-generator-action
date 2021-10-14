@@ -7,11 +7,10 @@ description: "Creates a changelog based on the commits using Angular Convention"
 inputs:
   path:
     description: "Path where the repository is located"
-    required: false
     default: '.'
   filename:
     description: "Name of the changelog file to write"
-    required: false
+    default: 'CHANGELOG.md'
 
 outputs:
   changelog:

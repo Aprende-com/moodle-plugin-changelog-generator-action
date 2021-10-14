@@ -30,10 +30,9 @@ def main():
     ap = ArgumentParser(description=main.__doc__)
 
     ap.add_argument('-p', '--path', type=str,
-                    default=ENV.get('INPUT_PATH', '.'))
+                    default=ENV.get('INPUT_PATH'))
     ap.add_argument('-f', '--filename', type=str,
-                    default=ENV.get('INPUT_FILENAME',
-                                    'CHANGELOG.md'))
+                    default=ENV.get('INPUT_FILENAME'))
 
     ap.add_argument('-d', '--debug', action='store_true',
                     default=False)
