@@ -9,8 +9,8 @@ inputs:
     description: "Path where the repository is located"
     required: false
     default: '.'
-  changelog_filename:
-    description: "Name of the changelog file"
+  filename:
+    description: "Name of the changelog file to write"
     required: false
 
 outputs:

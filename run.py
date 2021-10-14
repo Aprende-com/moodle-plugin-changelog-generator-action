@@ -31,8 +31,8 @@ def main():
 
     ap.add_argument('-p', '--path', type=str,
                     default=ENV.get('INPUT_PATH', '.'))
-    ap.add_argument('-f', '--changelog-filename', type=str,
-                    default=ENV.get('INPUT_CHANGELOG_FILENAME',
+    ap.add_argument('-f', '--filename', type=str,
+                    default=ENV.get('INPUT_FILENAME',
                                     'CHANGELOG.md'))
 
     ap.add_argument('-d', '--debug', action='store_true',
@@ -68,7 +68,7 @@ def main():
 
     if not args.dry_run:
         if len(output) > 1:
-            output_filename = f"{args.path}/{args.changelog_filename}"
+            output_filename = f"{args.path}/{args.filename}"
             with open(output_filename, "w+") as file:
                 file.writelines([ f"{x}\n" for x in output])
             print(f"{output_filename} written")
