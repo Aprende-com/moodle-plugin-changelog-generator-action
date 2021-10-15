@@ -93,7 +93,7 @@ def commit_line(repo, commit):
     print(f"Processing: {commit}")
     short_sha = repo.git.rev_parse(commit['sha'], short=8)
     link = f"../../commit/{short_sha}"
-    first_line = commit['message'].split('\n')[0].split("{commit['type']}:")[1].lstrip()
+    first_line = commit['message'].split('\n')[0].split(f"{commit['type']}:")[1].lstrip()
     return f"* {first_line} by **@{commit['author']}** in [{short_sha}]({link})"
 
 
