@@ -85,6 +85,7 @@ def commit_json(commit):
 #        'message': commit.message.split(': ')[1].rstrip(),
         'message': commit.message.rstrip(),
         'date': commit.committed_datetime.strftime('%Y-%m-%d')
+        'author': commit.author
     }
 
 
@@ -92,7 +93,7 @@ def commit_line(repo, commit):
     short_sha = repo.git.rev_parse(commit['sha'], short=8)
     link = f"../../commit/{short_sha}"
     message_first_line = commit['message'].split('\n')[0]
-    return f"* {message_first_line} ([{short_sha}]({link}))"
+    return f"* {message_first_line} by @{commit['author']} in {short_sha}]({link})"
 
 
 def commits_to_dict(commits):
