@@ -92,7 +92,7 @@ def commit_json(commit):
 def commit_line(repo, commit):
     short_sha = repo.git.rev_parse(commit['sha'], short=8)
     link = f"../../commit/{short_sha}"
-    message_first_line = commit['message'].split('\n')[0].split('{commit['type'}: '])[1]
+    message_first_line = commit['message'].split('\n')[0].split('{commit['type']}: '])[1]
     return f"* {message_first_line} by **@{commit['author']}** in [{short_sha}]({link})"
 
 
