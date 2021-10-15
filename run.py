@@ -84,7 +84,7 @@ def commit_json(commit):
         'type': commit.message.split(': ')[0],
 #        'message': commit.message.split(': ')[1].rstrip(),
         'message': commit.message.rstrip(),
-        'date': commit.committed_datetime.strftime('%Y-%m-%d')
+        'date': commit.committed_datetime.strftime('%Y-%m-%d'),
         'author': commit.author
     }
 
