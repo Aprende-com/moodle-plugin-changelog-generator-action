@@ -80,8 +80,7 @@ def main():
 
 def commit_json(commit):
     return {
-        'sha': '0c0a1a2b49bd4600e76cb3c4c353a33407ff2400',
-#        'sha': commit.hexsha,
+        'sha': commit.hexsha,
         'type': commit.message.split(': ')[0],
 #        'message': commit.message.split(': ')[1].rstrip(),
         'message': commit.message.rstrip(),
