@@ -40,7 +40,7 @@ def main():
                     default=False)
 
     args = ap.parse_args()
-    print(args)  # Debug
+    print("debugging", args)  # Debug
 
     print(f"Analizing git repository at: {args.path}")
     repo = Repo(args.path)
