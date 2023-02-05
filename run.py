@@ -43,6 +43,8 @@ def main():
     print(args)  # Debug
 
     print(f"Analizing git repository at: {args.path}")
+    print("printing repo list", repo)
+    print("printing repo list", repo.iter_commits())
     repo = Repo(args.path)
 
     if repo.bare:
@@ -50,7 +52,6 @@ def main():
 
     regex_expression = r'^(build:|ci:|feat:|fix:|perf:|refactor:|style:|test:)'
     regex = regex_compile(regex_expression)
-    print("printing repo list", repo.iter_commits())
     commits = [commit_json(x) for x in repo.iter_commits()
                if regex.findall(x.message)]
     commits_dict = commits_to_dict(commits)
