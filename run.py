@@ -50,7 +50,7 @@ def main():
 
     regex_expression = r'^(build:|ci:|feat:|fix:|perf:|refactor:|style:|test:)'
     regex = regex_compile(regex_expression)
-
+    print("printing repo list", repo.iter_commits())
     commits = [commit_json(x) for x in repo.iter_commits()
                if regex.findall(x.message)]
     commits_dict = commits_to_dict(commits)
