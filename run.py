@@ -43,9 +43,9 @@ def main():
     print(args)  # Debug
 
     print(f"Analizing git repository at: {args.path}")
-    print("printing repo list", repo)
-    print("printing repo list", repo.iter_commits())
     repo = Repo(args.path)
+    print("printing repo list", repo)
+    print("printing repo list", repo.iter_commits())    
 
     if repo.bare:
         raise Exception("Bare repo found!")
