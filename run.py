@@ -44,7 +44,7 @@ def main():
 
     print(f"Analizing git repository at: {args.path}")
     repo = Repo(args.path)
-    print("printing repo list", repo)
+    print("printing repo object", repo)
     print("printing repo list", repo.iter_commits())    
 
     if repo.bare:
