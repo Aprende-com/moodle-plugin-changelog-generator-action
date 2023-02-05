@@ -35,7 +35,7 @@ def main():
                     default=ENV.get('INPUT_FILENAME'))
 
     ap.add_argument('-d', '--debug', action='store_true',
-                    default=False)
+                    default=True)
     ap.add_argument('-z', '--dry-run', action='store_true',
                     default=False)
 
