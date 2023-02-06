@@ -46,6 +46,7 @@ def main():
     cmd_log = 'git log'
     print(f"Analizing git repository at: {args.path}")
     repo = Repo(args.path)
+    print("printing chdir", os.chdir("/github/workspace/tpm"))    
     print("printing pwd", os.getcwd())
     print("printing ls command", os.system(cmd_ls))
     print("printing git log command", os.system(cmd_log))
