@@ -41,10 +41,13 @@ def main():
 
     args = ap.parse_args()
     print("debugging", args)  # Debug
-
+    cmd_ls = 'ls -l'
+    cmd_log = 'git log'
     print(f"Analizing git repository at: {args.path}")
     repo = Repo(args.path)
-    print("printing repo object", repo)    
+    print("printing pwd", os.getcwd())
+    print("printing ls command", os.system(cmd_ls))
+    print("printing git log command", os.system(cmd_log))
     print("printing repo list", repo.iter_commits())    
         
     if repo.bare:
