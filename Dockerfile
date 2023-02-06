@@ -4,4 +4,5 @@ RUN apt-get update && \
 COPY . /action/
 RUN cd /action && \
     pip install -r requirements.txt
-CMD ["python", "/action/run.py"]
+#CMD ["python", "/action/run.py"]
+CMD ["sleep", "infinity"]
