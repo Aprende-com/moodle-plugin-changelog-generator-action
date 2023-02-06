@@ -5,4 +5,4 @@ COPY . /action/
 RUN cd /action && \
     pip install -r requirements.txt
 #CMD ["python", "/action/run.py"]
-CMD ["watch", "ls"]
+CMD ["sleep", "infinity"]
