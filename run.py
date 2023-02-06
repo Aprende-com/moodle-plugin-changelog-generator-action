@@ -44,11 +44,13 @@ def main():
     print("debugging", args)  # Debug
     cmd_ls = 'printenv'
     cmd_log = 'git log'
+    cmd_config = 'git config --list'    
     print(f"Analizing git repository at: {args.path}")
     repo = Repo(args.path)
     print("printing chdir", os.chdir(os.environ['PLUGIN_LOCAL'])) 
     print("printing pwd", os.getcwd())
     print("printing ls command", os.system(cmd_ls))
+    print("printing git config", os.system(cmd_config))
     print("printing git log command", os.system(cmd_log))
     print("printing repo list", repo.iter_commits())    
         
