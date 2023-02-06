@@ -47,6 +47,7 @@ def main():
     print(f"Analizing git repository at: {args.path}")
     repo = Repo(args.path)
     print("printing pwd", os.getcwd())
+    print("change dir", os.chdir(args.path))
     print("printing ls command", os.system(cmd_ls))
     print("printing git log command", os.system(cmd_log))
     print("printing repo list", repo.iter_commits())    
