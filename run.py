@@ -2,6 +2,7 @@
 
 from git import Repo
 from re import compile as regex_compile
+import os
 from os import environ as ENV
 from argparse import ArgumentParser
 
