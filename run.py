@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 
-from git import Repo
+from git import Repo, db
 from re import compile as regex_compile
 import os
 from os import environ as ENV
 from argparse import ArgumentParser
-from gitdb import GitDB
 
 # Angular Convention Types:
 # References:
@@ -47,7 +46,7 @@ def main():
     cmd_log = 'git log'
     cmd_config = 'git config --list'    
     print(f"Analizing git repository at: {args.path}")
-    repo = Repo(args.path, odbt=GitDB)
+    repo = Repo(args.path, odbt=db.GitDB)
     #print("printing chdir", os.chdir(os.environ['PLUGIN_LOCAL'])) 
     print("printing pwd", os.getcwd())
     print("printing ls command", os.system(cmd_ls))
