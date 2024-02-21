@@ -46,7 +46,7 @@ def main():
     cmd_log = 'git log'
     cmd_config = 'git config --list'    
     print(f"Analizing git repository at: {args.path}")
-    repo = Repo(args.path)
+    repo = Repo(args.path, odbt=GitDB)
     #print("printing chdir", os.chdir(os.environ['PLUGIN_LOCAL'])) 
     print("printing pwd", os.getcwd())
     print("printing ls command", os.system(cmd_ls))
