@@ -5,6 +5,7 @@ from re import compile as regex_compile
 import os
 from os import environ as ENV
 from argparse import ArgumentParser
+from gitdb import GitDB
 
 # Angular Convention Types:
 # References:
